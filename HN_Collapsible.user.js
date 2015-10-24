@@ -1,4 +1,4 @@
-// ==UserScript==
+﻿// ==UserScript==
 // @name        HN Collapsible
 // @namespace   HNC
 // @description Collapsible comments on Hacker News
@@ -19,11 +19,11 @@ function parseRow(el) {
   if(!isDead(el)) {
     el.indent = el.querySelector("img").width;
     el.replies = [];
-    var next = el.nextSibling;
-    while(next.querySelector("img").width > el.indent) {
+    var next = el;
+    do {
+      next = next.nextElementSibling;
       el.replies.push(next);
-      next = next.nextSibling;
-    }
+    } while (next.querySelector('img').width > el.indent)
     el.replyCount = el.replies.length;
     if(el.replyCount > 0) {
       collapsible(el);
