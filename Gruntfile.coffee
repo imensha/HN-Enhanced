@@ -16,7 +16,7 @@ module.exports = (grunt) ->
           'src/Meta/metadata.js'
           'tmp-userscript/script.js'
         ]
-        dest: 'HN_Enhanced.user.js'
+        dest: 'dist/HN_Enhanced.user.js'
     coffee:
       userscript:
         src: 'tmp-userscript/script.coffee'
