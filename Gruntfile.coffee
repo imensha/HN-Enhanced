@@ -23,8 +23,17 @@ module.exports = (grunt) ->
         dest: 'tmp-userscript/script.js'
     clean:
       userscript: 'tmp-userscript'
+    watch:
+      source:
+        files: ['src/**/*.coffee']
+        tasks: ['build']
+        options:
+          interrupt: true
 
   require('load-grunt-tasks') grunt
 
-  grunt.registerTask 'default', ['userscript']
+  grunt.registerTask 'default', ['build']
+  # TODO add Chrome extension build task to build tasks
+  grunt.registerTask 'build', ['userscript']
   grunt.registerTask 'userscript', ['concat:coffee', 'coffee:userscript', 'concat:userscript', 'clean:userscript']
+  # TODO create Chrome extension build task
