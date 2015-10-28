@@ -1,6 +1,6 @@
 {
-  "name": "HN Enhanced",
-  "version": "0.1",
+  "name": "HN-Enhanced",
+  "version": "0.0.1",
   "description": "Enhance Hacker News threads with additional features",
   "repository": {
     "type": "git",
@@ -11,6 +11,7 @@
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-coffee": "^0.13.0",
     "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-watch": "^0.6.1",
     "load-grunt-tasks": "^3.3.0"
   },
   "license": "MIT"
