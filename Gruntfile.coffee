@@ -8,6 +8,7 @@ module.exports = (grunt) ->
           'src/$.coffee'
           'src/Ajax.coffee'
           'src/Post.coffee'
+          'src/User.coffee'
           'src/Main.coffee'
         ]
         dest: 'tmp-userscript/script.coffee'

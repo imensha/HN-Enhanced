@@ -1,4 +1,5 @@
 c   = console
 d   = document
-g   = {}
+g   =
+  USERS: {}
 log = c.log.bind c
